@@ -1,0 +1,62 @@
+
+
+<!-- Task List Section -->
+ <section class="task-list-container" role="region">
+    <ul class="task-list" role="list">
+        <li class="task-item" role="listitem" id="task-1">
+            <div class="task-content">
+                <span class="task-title">Sample task</span>
+                <span class="task-description">Sample description</span>
+            </div>
+        </li>
+    </ul>
+ </section>
+
+
+
+ <form id="taskForm" class="task-form">
+    <div class="form-group">
+        <label for="taskTitle">Task Title: </label>
+        <input type="text" id="taskTitle" name="taskTitle" required>
+    </div>
+    <div class="formgroup">
+        <label for="taskDescription">Description: </label>
+        <textarea name="taskDescription" id="taskDescription" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="taskPriority">Priority: </label>
+       <select name="taskPriority" id="taskPriority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">high</option>
+       </select>
+    </div>
+    <div class="form-group">
+        <label for="taskDueDate">Due Date:</label>
+        <input type="date" id="taskDueDate" name="taskDueDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Task</button>
+</form>
+
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+    
+    .input-section, .task-list-section {
+        padding: 10px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-section input, .input-section select {
+        width: 100%;
+    }
+    
+    .input-section button {
+        width: 100%;
+    }
+}
